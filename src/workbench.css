@@ -1,0 +1,47 @@
+@font-face {
+  font-family: AgnesGateLocalTitle;
+  src: local('Engravers MT'), local('EngraversMT');
+  font-display: swap;
+  font-weight: 500;
+}
+
+dialog.agnes-gate:modal {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  font: 400 16px / normal AgnesGateSans, 'Microsoft YaHei', sans-serif;
+  font-synthesis: none;
+  outline: none;
+  box-shadow: none;
+  translate: none;
+  transition: none;
+}
+.agnes-gate::backdrop { background: transparent; transition: none; }
+.agnes-gate button:focus-visible {
+  outline: 2px solid #e5c891;
+  outline-offset: 4px;
+}
+.agnes-gate button:disabled { opacity: .3; cursor: default; }
+.agnes-gate .agnes-gate-skip {
+  border: 0;
+  border-bottom: 1px solid #a18b554d;
+  border-radius: 0;
+  background: none;
+}
+.agnes-gate button { font-family: inherit; font-weight: inherit; cursor: pointer; border-radius: 0; }
+
+body:has([data-agnes-mountain-wallpaper]) #main-content {
+  --agnes-mountain-tint: color-mix(in srgb, var(--agnes-bg-app-content) 63%, transparent);
+  background:
+    linear-gradient(var(--agnes-mountain-tint), var(--agnes-mountain-tint)),
+    var(--agnes-bg-app-content) url('./assets/mountain-world.webp') center 48% / cover no-repeat;
+}
+body:has([data-agnes-mountain-wallpaper]) #main-content > .workbench-split,
+body:has([data-agnes-mountain-wallpaper]) #main-content .conversation-shell {
+  background-color: transparent;
+}

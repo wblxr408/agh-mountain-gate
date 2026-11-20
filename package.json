@@ -1,0 +1,77 @@
+{
+  "name": "@wblxr408/mountain-gate",
+  "version": "1.0.5",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24.10"
+  },
+  "exports": "./index.mjs",
+  "files": [
+    "index.mjs",
+    "src",
+    "licenses",
+    "README.md",
+    "LICENSE",
+    "agh.market.json"
+  ],
+  "peerDependencies": {
+    "react": "18.3.1"
+  },
+  "agnes": {
+    "provides": [
+      "ui"
+    ],
+    "plugins": [
+      {
+        "id": "ext:@wblxr408/mountain-gate/main",
+        "export": "main",
+        "apiRange": "^5.0.0",
+        "runtime": "in-process",
+        "capabilities": {
+          "ui": true
+        },
+        "metadata": {
+          "displayName": "Agnes Mountain Gate",
+          "summary": "The original 3D gate and mountain scenery from Seasonal Atlas.",
+          "description": "Push the wooden gate and follow the traveler through the original 18-second opening into the Agnes workbench.",
+          "locales": {
+            "zh-CN": {
+              "displayName": "Agnes Harness 山水入户",
+              "summary": "推开古门，进入以《天时经纬》原图为背景的 Agnes Harness 工作台。",
+              "description": "跟随旅人推门，沿原版 18 秒镜头进入 Agnes Harness，门后山水继续作为工作台背景。"
+            }
+          }
+        }
+      }
+    ],
+    "clientDescriptors": [
+      {
+        "rowId": "ext:@wblxr408/mountain-gate/main",
+        "path": "./src/agnes.client.json"
+      }
+    ],
+    "metadata": {
+      "displayName": "Agnes Mountain Gate",
+      "summary": "A 3D entrance and matching wallpaper for the Agnes workbench.",
+      "description": "Installs the Seasonal Atlas 3D opening and its original mountain scene on the Agnes desktop.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "Agnes Harness 山水入户",
+          "summary": "古门开场与山水桌面。",
+          "description": "将《天时经纬》的开场和山水原图接入 Agnes Harness 工作台。"
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-mountain-gate"
+  },
+  "keywords": [
+    "agh-plugin",
+    "agnes-harness",
+    "startup-animation",
+    "workbench"
+  ]
+}
