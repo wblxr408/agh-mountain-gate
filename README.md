@@ -5,7 +5,7 @@
 ## 安装
 
 ```sh
-agh plugins add git:https://github.com/wblxr408/agh-mountain-gate#v1.0.5
+agh plugins add git:https://github.com/wblxr408/agh-mountain-gate#runtime-v1.0.5
 ```
 
 打开新的工作台标签页即可体验。插件通过 Agnes Harness 客户端 SDK 的 `shell.overlay` 插槽展示开场和背景。它声明 `ui` 能力，需要宿主提供 React 18.3.1 和插件 API 5。选择这一开场的配置中，禁用其他开场插件可避免两段动画同时出现。

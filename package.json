@@ -1,5 +1,5 @@
 {
-  "name": "@wblxr408/mountain-gate",
+  "name": "@wblxr408/mountain-gate-runtime",
   "version": "1.0.5",
   "type": "module",
   "license": "Apache-2.0",
@@ -24,7 +24,7 @@
     ],
     "plugins": [
       {
-        "id": "ext:@wblxr408/mountain-gate/main",
+        "id": "ext:@wblxr408/mountain-gate-runtime/main",
         "export": "main",
         "apiRange": "^5.0.0",
         "runtime": "in-process",
@@ -47,7 +47,7 @@
     ],
     "clientDescriptors": [
       {
-        "rowId": "ext:@wblxr408/mountain-gate/main",
+        "rowId": "ext:@wblxr408/mountain-gate-runtime/main",
         "path": "./src/agnes.client.json"
       }
     ],
