@@ -1,77 +1,65 @@
 {
   "name": "@wblxr408/mountain-gate",
-  "version": "1.0.5",
-  "type": "module",
+  "version": "2.0.0",
   "license": "Apache-2.0",
-  "engines": {
-    "node": ">=24.10"
-  },
-  "exports": "./index.mjs",
-  "files": [
-    "index.mjs",
-    "src",
-    "licenses",
-    "README.md",
-    "LICENSE",
-    "agh.market.json"
-  ],
-  "peerDependencies": {
-    "react": "18.3.1"
-  },
-  "agnes": {
-    "provides": [
-      "ui"
-    ],
-    "plugins": [
-      {
-        "id": "ext:@wblxr408/mountain-gate/main",
-        "export": "main",
-        "apiRange": "^5.0.0",
-        "runtime": "in-process",
-        "capabilities": {
-          "ui": true
-        },
-        "metadata": {
-          "displayName": "Agnes Mountain Gate",
-          "summary": "The original 3D gate and mountain scenery from Seasonal Atlas.",
-          "description": "Push the wooden gate and follow the traveler through the original 18-second opening into the Agnes workbench.",
-          "locales": {
-            "zh-CN": {
-              "displayName": "Agnes Harness 山水入户",
-              "summary": "推开古门，进入以《天时经纬》原图为背景的 Agnes Harness 工作台。",
-              "description": "跟随旅人推门，沿原版 18 秒镜头进入 Agnes Harness，门后山水继续作为工作台背景。"
-            }
-          }
-        }
-      }
-    ],
-    "clientDescriptors": [
-      {
-        "rowId": "ext:@wblxr408/mountain-gate/main",
-        "path": "./src/agnes.client.json"
-      }
-    ],
-    "metadata": {
-      "displayName": "Agnes Mountain Gate",
-      "summary": "A 3D entrance and matching wallpaper for the Agnes workbench.",
-      "description": "Installs the Seasonal Atlas 3D opening and its original mountain scene on the Agnes desktop.",
-      "locales": {
-        "zh-CN": {
-          "displayName": "Agnes Harness 山水入户",
-          "summary": "古门开场与山水桌面。",
-          "description": "将《天时经纬》的开场和山水原图接入 Agnes Harness 工作台。"
-        }
-      }
-    }
-  },
+  "description": "Configuration bundle. Install and authorize the separate runtime for Mountain Gate.",
   "repository": {
     "type": "git",
     "url": "https://github.com/wblxr408/agh-mountain-gate"
   },
-  "keywords": [
-    "agh-plugin",
-    "agnes-harness",
-    "startup-animation",
-    "workbench"
-  ]
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json"
+  ],
+  "agnes": {
+    "provides": [
+      "bundle"
+    ],
+    "metadata": {
+      "displayName": "Mountain Gate",
+      "summary": "Configuration bundle. Install and authorize the separate runtime for Mountain Gate.",
+      "description": "Reload the AGH Web workbench to open the mountain gate and enter the workspace.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "山水入户",
+          "summary": "配置 Bundle。山水入户功能由单独安装和授权的运行组件提供。",
+          "description": "刷新 AGH Web 工作台，推开古门进入山水工作台。"
+        }
+      }
+    },
+    "bundles": {
+      "guide": {
+        "profile": {
+          "toolPolicy": {
+            "readOnly": true
+          }
+        },
+        "presets": {
+          "market-guide": {
+            "name": "market-guide",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Mountain Gate Setup",
+            "zh-CN": "山水入户配置说明"
+          },
+          "description": {
+            "en": "Configuration bundle. Install and authorize the separate runtime for Mountain Gate.",
+            "zh-CN": "配置 Bundle。山水入户功能由单独安装和授权的运行组件提供。"
+          },
+          "preset": "market-guide",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "Explain how to set up Mountain Gate in AGH. The owner installs and authorizes its separate runtime. Reload the AGH Web workbench to open the mountain gate and enter the workspace.",
+              "zh-CN": "请说明如何在 AGH 中配置山水入户。由所有者单独安装和授权运行组件。刷新 AGH Web 工作台，推开古门进入山水工作台。"
+            }
+          }
+        }
+      }
+    }
+  }
 }
