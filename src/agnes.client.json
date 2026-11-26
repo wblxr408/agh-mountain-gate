@@ -1,4 +1,11 @@
 {
+  "skins": [
+    {
+      "id": "mountain-gate",
+      "name": "Mountain Gate",
+      "css": "./mountain-skin.css"
+    }
+  ],
   "client": {
     "id": "mountain-gate",
     "entry": "./client.js",
@@ -14,6 +21,20 @@
     "slotCatalogVersion": "dsh-client-slots/v1",
     "slots": [
       "shell.overlay"
+    ],
+    "homeEntries": [
+      {
+        "id": "mountain-gate-guide",
+        "placement": "secondary",
+        "navigation": {
+          "title": "Mountain Gate guide: A gate covers the workbench on opening, once per tab. Only clicking “推门入户” starts the 18-second animation. The mountain wallpaper stays.",
+          "titles": {
+            "zh-CN": "山水入户指南：新标签页打开工作台时会先显示古门遮罩。仅点击「推门入户」才播放约 18 秒动画。山水图将保留为工作台背景。"
+          },
+          "icon": "image",
+          "order": 50
+        }
+      }
     ]
   }
 }

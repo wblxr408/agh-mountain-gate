@@ -115,7 +115,9 @@ export function mountGate(host, app, onEntered) {
   }
 
   enter.addEventListener('click', () => {
+    enter.disabled = true
     journey.start()
+    resetClock()
     dialog.classList.add('opening')
   })
   dialog.querySelector('.agnes-gate-skip').addEventListener('click', skip)

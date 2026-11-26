@@ -35,13 +35,17 @@ dialog.agnes-gate:modal {
 }
 .agnes-gate button { font-family: inherit; font-weight: inherit; cursor: pointer; border-radius: 0; }
 
-body:has([data-agnes-mountain-wallpaper]) #main-content {
-  --agnes-mountain-tint: color-mix(in srgb, var(--agnes-bg-app-content) 63%, transparent);
-  background:
-    linear-gradient(var(--agnes-mountain-tint), var(--agnes-mountain-tint)),
-    var(--agnes-bg-app-content) url('./assets/mountain-world.webp') center 48% / cover no-repeat;
+.mountain-gate-guide {
+  max-inline-size: 54rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+  color: var(--agnes-text-primary);
+  background-color: var(--agnes-bg-surface);
 }
-body:has([data-agnes-mountain-wallpaper]) #main-content > .workbench-split,
-body:has([data-agnes-mountain-wallpaper]) #main-content .conversation-shell {
-  background-color: transparent;
+
+.mountain-gate-guide img {
+  display: block;
+  margin-block-start: 1rem;
+  max-inline-size: 100%;
+  height: auto;
 }

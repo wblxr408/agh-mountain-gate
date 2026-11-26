@@ -1,0 +1,10 @@
+main:has(> [data-agnes-region="home-page"]) {
+  --mountain-gate-tint: color-mix(in srgb, var(--agnes-bg-app-content) 72%, transparent);
+  background:
+    linear-gradient(var(--mountain-gate-tint), var(--mountain-gate-tint)),
+    var(--agnes-bg-app-content) url('assets/mountain-world.webp') center 48% / cover no-repeat;
+}
+
+main:has(> [data-agnes-region="home-page"]) [data-agnes-region="conversation"] {
+  background-color: transparent;
+}

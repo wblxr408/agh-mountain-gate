@@ -1,6 +1,6 @@
 {
   "name": "@wblxr408/mountain-gate-runtime",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "license": "Apache-2.0",
   "engines": {
@@ -22,6 +22,15 @@
     "provides": [
       "ui"
     ],
+    "application": {
+      "id": "mountain-gate",
+      "presentation": {
+        "skin": "mountain-gate",
+        "navigation": {
+          "entries": ["@wblxr408/mountain-gate-runtime#mountain-gate-guide"]
+        }
+      }
+    },
     "plugins": [
       {
         "id": "ext:@wblxr408/mountain-gate-runtime/main",
