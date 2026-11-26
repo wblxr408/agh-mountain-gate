@@ -5,10 +5,16 @@
 ## 安装
 
 ```sh
-agh plugins add git:https://github.com/wblxr408/agh-mountain-gate#runtime-v1.0.5
+agh plugins add git:https://github.com/wblxr408/agh-mountain-gate.git#b689d98a0bf4a3e23656b32b4acc25924054dacc
 ```
 
-打开新的工作台标签页即可体验。插件通过 Agnes Harness 客户端 SDK 的 `shell.overlay` 插槽展示开场和背景。它声明 `ui` 能力，需要宿主提供 React 18.3.1 和插件 API 5。选择这一开场的配置中，禁用其他开场插件可避免两段动画同时出现。
+如已装 1.0.5，可用 `agh plugins add file:/path/to/mountain-gate-runtime` 安装本地 1.0.6 候选包，按提示审阅并信任新版。安装和信任不会启用浏览器开场。
+
+在 **设置 → 应用** 预览 1.0.6。审阅页的 **显示的导航** 说明古门会遮住新标签页的工作台、只有点击「推门入户」才播放动画，以及山水背景。确认后选择 **采用**。古门每个标签页只显示一次。侧栏的 **山水入户** 页面可预览原图，也可在新标签页再次体验开场。不要同时采用多个开场插件。
+
+指南与 `shell.overlay` 使用同一个 `profile` 客户端行，只有采用了该版本才加载。山水背景由应用声明的纯 CSS 皮肤提供，无需开场脚本维持。系统减少动态效果时，工作台仍可显示山水背景。通过 **设置 → 常规 → 外观 → 皮肤** 可覆盖应用的外观默认值。若要撤销整个开场和应用默认外观，在 **设置 → 应用** 选择 **恢复官方界面**，或打开 `/?admin` 后恢复。
+
+插件声明 `ui` 能力，宿主须提供 React 18.3.1 和插件 API 5。
 
 ## 素材和依赖
 
